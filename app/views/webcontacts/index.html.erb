@@ -1,0 +1,37 @@
+<div class="page-header">
+  <%= link_to new_webcontact_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Webcontact
+  <% end %>
+  <h1>Listing webcontacts</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Recorded</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @webcontacts) do |webcontact| %>
+            <td><%= webcontact.name %></td>
+            <td><%= webcontact.email %></td>
+            <td><%= webcontact.subject %></td>
+            <td><%= webcontact.message %></td>
+            <td><%= webcontact.recorded %></td>
+            <td><%= link_to 'Show', webcontact %></td>
+        <td><%= link_to 'Edit', edit_webcontact_path(webcontact) %></td>
+        <td><%= link_to 'Destroy', webcontact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

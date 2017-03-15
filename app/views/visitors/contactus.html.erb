@@ -1,0 +1,69 @@
+
+<section id="about" class="main-container">
+  <div class="container">
+    <div class="row">
+
+      <div class="main col-md-12">
+        <h3 class="title"><strong>Contact WATAN</strong></h3>
+        <div class="separator-2"></div>
+        <div class="row">
+          <div class="col-md-6">
+
+
+
+
+
+
+
+            <%= form_for(@websitecontact) do |f| %>
+                <% if @websitecontact.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@websitecontact.errors.count, "error") %> prohibited this websitecontact from being saved:</h2>
+
+                      <ul>
+                        <% @websitecontact.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                <% end %>
+
+                <div class="field">
+                  <%= f.label :name %><br>
+                  <%= f.text_field :name %>
+                </div>
+                <div class="field">
+                  <%= f.label :email %><br>
+                  <%= f.text_field :email %>
+                </div>
+                <div class="field">
+                  <%= f.label :subject %><br>
+                  <%= f.text_field :subject %>
+                </div>
+                <div class="field">
+                  <%= f.label :message %><br>
+                  <%= f.text_area :message %>
+                </div>
+                <% if user_signed_in? %>
+                    <div class="field">
+                      <%= f.label :recorded %><br>
+                      <%= f.check_box :recorded %>
+                    </div>
+                <% end %>
+                <div class="actions">
+                  <%= f.submit 'Submit', class: "btn btn-sm btn-primary" %>
+                </div>
+            <% end %>
+
+
+          </div>
+          <div class="col-md-6">
+<%= @contactinfo.body.html_safe %>
+
+          </div>
+        </div>
+      </div>
+      <!-- main end -->
+    </div>
+  </div>
+</section>

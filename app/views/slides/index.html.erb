@@ -1,0 +1,50 @@
+<div class="page-header">
+  <%= link_to new_slide_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Slide
+  <% end %>
+  <h1>Listing slides</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Image</th>
+            <th>Publish</th>
+            <th>Watanprogram</th>
+
+            <th>Justify</th>
+
+
+            <th>Blurb</th>
+            <th>Blurblines</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Imgalt</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @slides) do |slide| %>
+        <td> <%= image_tag slide.image.url, :width => "100", :class => "pull-left" %></td>
+            <td><%= slide.publish %></td>
+            <td><%= slide.watanprogram.name %></td>
+
+            <td><%= slide.justify %></td>
+
+            <td><%= slide.blurb %></td>
+            <td><%= slide.blurblines %></td>
+            <td><%= slide.title %></td>
+            <td><%= slide.body %></td>
+            <td><%= slide.imgalt %></td>
+            <td><%= link_to 'Show', slide %></td>
+        <td><%= link_to 'Edit', edit_slide_path(slide) %></td>
+        <td><%= link_to 'Destroy', slide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

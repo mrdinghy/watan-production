@@ -1,0 +1,2 @@
+json.extract! slide, :id, :publish, :watanprogram_id, :transition_id, :justify, :slotamount, :logo, :logo_datay, :logo_datastart, :title_datay, :title_datastart, :text_datay, :text_datastart, :side, :topline, :blurb, :blurblines, :title, :body, :imgalt, :created_at, :updated_at
+json.url slide_url(slide, format: :json)

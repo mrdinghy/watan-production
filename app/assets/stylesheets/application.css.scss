@@ -1,0 +1,50 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datepicker3";
+@import "font-awesome";
+@import "chosen";
+@import "animations";
+@import "fontello";
+@import "magnific-popup";
+@import "settings";
+@import "animations";
+@import "owl.carousel";
+@import "owl.transitions";
+@import "hover-min";
+@import "style";
+@import "blue";
+/*@import "layers";*/
+@import "magnific-popup";
+/*@import "navigation";*/
+@import "custom";
+@import "froala_editor.min";
+@import "froala_style.min";
+@import "plugins/code_view.min";
+
+
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: font-url('/assets/AvenirNextLTPro-Regular.otf') format("opentype");
+  font-size: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'AvenirNextLTPro';
+}
+.avenir  {
+  font-family: 'AvenirNextLTPro';
+}
+
+
+h1, h2, h3, h4, h5, h6, .navbar .navbar-nav {
+  font-family: 'AvenirNextLTPro';
+}
+
+
+.navbar-nav {
+  font-family: 'AvenirNextLTPro';
+}
+
+

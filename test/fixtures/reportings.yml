@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  application_id: 1
+  disagg_id: 1
+  commodity_id: 1
+  pointtype: 1
+
+two:
+  application_id: 1
+  disagg_id: 1
+  commodity_id: 1
+  pointtype: 1

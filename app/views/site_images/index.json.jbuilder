@@ -1,0 +1,1 @@
+json.array! @site_images, partial: 'site_images/site_image', as: :site_image

@@ -1,0 +1,44 @@
+<div class="page-header">
+  <%= link_to posts_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_post_path(@post), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show post</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @post.title %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @post.body %></dd>
+
+  <dt>Published at:</dt>
+  <dd><%= @post.published_at %></dd>
+
+  <dt>Post type:</dt>
+  <dd><%= @post.post_type %></dd>
+
+  <dt>On homepage:</dt>
+  <dd><%= @post.on_homepage %></dd>
+
+  <dt>Event location:</dt>
+  <dd><%= @post.event_location %></dd>
+
+  <dt>Event link:</dt>
+  <dd><%= @post.event_link %></dd>
+
+  <dt>Is event:</dt>
+  <dd><%= @post.is_event %></dd>
+
+  <dt>Event date:</dt>
+  <dd><%= @post.event_date %></dd>
+
+  <dt>Event time:</dt>
+  <dd><%= @post.event_time %></dd>
+
+</dl>

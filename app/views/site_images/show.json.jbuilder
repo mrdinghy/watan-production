@@ -1,0 +1,1 @@
+json.partial! "site_images/site_image", site_image: @site_image

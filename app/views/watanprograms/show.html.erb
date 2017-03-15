@@ -1,0 +1,33 @@
+
+<section id="media" class="main-container">
+  <div class="container">
+    <div class="row">
+
+      <div class="main col-md-12">
+
+        <% if user_signed_in? %>
+        <%= link_to watanprograms_path, class: 'btn btn-default' do %>
+            <span class="glyphicon glyphicon-list-alt"></span>
+            Back
+        <% end %>
+        <%= link_to edit_watanprogram_path(@watanprogram), class: 'btn btn-primary' do %>
+            <span class="glyphicon glyphicon-pencil"></span>
+            Edit
+        <% end %>
+            <% end %>
+        <h3 class="title"><%= @watanprogram.name %></h3>
+        <div class="separator-2"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <%= @watanprogram.body.html_safe %>
+          </div>
+          <div class="col-md-6">
+
+
+          </div>
+        </div>
+      </div>
+      <!-- main end -->
+    </div>
+  </div>
+</section>

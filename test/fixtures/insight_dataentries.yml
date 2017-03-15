@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  insightid: 1
+  pidut: 1
+  ftfannualtarget: 1.5
+  nonftfannualtarget: 1.5
+  ftfquartertarget: 1.5
+  nonftfquartertarget: 1.5
+  total_target: 1.5
+  ftfquarterresult: 1.5
+  nonftfquarterresult: 1.5
+  total_result: 1.5
+  variance: 1.5
+  yid: 1
+  qid: 1
+  comment: MyString
+  comment2: MyString
+
+two:
+  insightid: 1
+  pidut: 1
+  ftfannualtarget: 1.5
+  nonftfannualtarget: 1.5
+  ftfquartertarget: 1.5
+  nonftfquartertarget: 1.5
+  total_target: 1.5
+  ftfquarterresult: 1.5
+  nonftfquarterresult: 1.5
+  total_result: 1.5
+  variance: 1.5
+  yid: 1
+  qid: 1
+  comment: MyString
+  comment2: MyString

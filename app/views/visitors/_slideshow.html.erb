@@ -1,0 +1,261 @@
+<!-- banner start -->
+<!-- ================ -->
+
+
+<!-- slideshow start -->
+<!-- ================ -->
+<div class="slideshow">
+
+  <!-- slider revolution start -->
+  <!-- ================ -->
+  <div class="slider-revolution-5-container">
+    <div id="slider-banner-fullscreen" class="slider-banner-fullscreen rev_slider" data-version="5.0">
+      <ul class="slides">
+
+
+        <% @myslides.each do |slide| %>
+
+
+            <li data-transition="fade" data-masterspeed="default" data-title="">
+              <% title_go = slide.topline.to_i + 130 %>
+              <% line_go = title_go  + 50 %>
+              <% text_go = line_go  + 10 %>
+              <% textlines = slide.blurblines * 40 %>
+              <% social_go = 80 + (text_go + textlines) %>
+
+
+
+              <!-- main image -->
+              <%= image_tag slide.image.url, :class => "rev-slidebg", :data => { :bgposition => "center center", :bgrepeat => "no-repeat", :bgfit => "cover"}  %>
+
+
+
+              <!-- Transparent Background -->
+              <div class="tp-caption dark-translucent-bg"
+                   data-x="center"
+                   data-y="center"
+                   data-start="0"
+                   data-transform_idle="o:1;"
+                   data-transform_in="o:0;s:600;e:Power2.easeInOut;"
+                   data-transform_out="o:0;s:600;"
+                   data-width="5000"
+                   data-height="5000">
+              </div>
+
+              <!-- LAYER NR. 1 -->
+
+              <div class="tp-caption large_white text-<%= slide.justify %>"
+                   data-x="<%= slide.justify %>"
+                   data-y="100"
+                   data-start="100"
+                   data-transform_idle="o:1;"
+                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:2000;e:Power4.easeInOut;"
+                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+                <%#= image_tag("logo_PNG_white.png", height: "50%", alt: "Edit Entry") %><br>
+                <!---<image src="logo_PNG_white.png" height="50%" alt="Edit Entry"></image><br>--->
+
+
+              </div>
+
+
+
+
+
+
+
+              <div class="tp-caption large_white text-<%= slide.justify %>"
+                   data-x="<%= slide.justify %>"
+                   data-y="<%= title_go %>"
+                   data-start="800"
+                   data-transform_idle="o:1;"
+                   data-transform_in="y:[100%];sX:1;sY:1;o:0;s:2000;e:Power4.easeInOut;"
+                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                   data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" style="width: 900px">
+                <%= slide.watanprogram.name %>
+
+
+              </div>
+
+              <!-- LAYER NR. 2 -->
+              <div class="tp-caption large_white tp-resizeme"
+                   data-x="<%= slide.justify %>"
+                   data-y="<%= line_go %>"
+                   data-start="750"
+                   data-transform_idle="o:1;"
+                   data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
+                <div class="separator-3 light"></div>
+              </div>
+
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption medium_white text-<%= slide.justify %>"
+                   data-x="<%= slide.justify %>"
+                   data-y="<%= text_go %>"
+                   data-start="-200"
+                   data-transform_idle="o:1;"
+                   data-transform_in="y:[100%];sX:1;sY:1;s:1750;e:Power4.easeInOut;"
+                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                   data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" style="width: 900px">
+                <%= slide.blurb %><br>
+
+                <%= link_to 'Learn More', root_path(:anchor => 'about'), :class => "btn btn-primary radius-50 btn-lg btn-animated margin-clear" %>
+                <i class="fa fa-info-circle"></i></a> <span class="pl-5 pr-5">or</span>
+                <%= link_to 'Donate', root_path(:anchor => 'donate'), :class => "btn btn-danger btn-lg radius-50 btn-lg btn-animated margin-clear" %>
+                <i class="fa fa-envelope"></i></a>
+
+              </div>
+
+
+              <div class="tp-caption medium_white text-<%= slide.justify %> social-stack"
+                   data-x="<%= slide.justify %>"
+                   data-y="<%= social_go %>"
+                   data-start="0"
+                   data-transform_idle="o:1;"
+                   data-transform_in="y:[100%];sX:1;sY:1;s:1750;e:Power4.easeInOut;"
+                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                   data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" style="width: 900px">
+
+
+                <ul class="social-stack" style="font-size: 24px">
+                  <!---
+                  <li class="facebook" style="display: inline"><a href="https://www.facebook.com/WatanSyria" title="Watan on Facebook"><span class="icon-facebook"></span></a></li>
+                  <li class="twitter" style="display: inline"><a href="https://twitter.com/WatanSyria" title="Watan on Twitter"><span class="icon-twitter"></span></a></li>
+                  <li class="youtube" style="display: inline"><a href="http://www.youtube.com/user/WatanSyria" title="Watan on Youtube"><span class="icon-youtube"></span><i class="icon-youtube"></i></a></li>
+                  <li class="flickr" style="display: inline"><a href="http://www.flickr.com/photos/100690720@N04/" title="Watan on Flickr"><span class="icon-flickr"></span></a></li>
+                  <li class="email" style="display: inline"><a href="http://www.watansyria.org/en/contact-us/" title="Contact Watan"><span class="icon-paper-plane"></span></a></li>
+                  <li class="instagram" style="display: inline"><a href="http://instagram.com/watansyria" title="Watan on Instagram"><span class="icon-instagram"></span></a></li>
+                  <li class="linkedin" style="display: inline"><a href="http://www.linkedin.com/company/watansyria" title="Watan on LinkedIn"><span class="icon-linkedin"></span></a></li>
+                  <li class="rss" style="display: inline"><a href="http://www.watansyria.org/en/feed" title="RSS Feed"><span class="icon-rss"></span></a></li>
+--->
+                </ul>
+              </div>
+
+
+
+              <div class="tp-caption medium_white text-right"
+                   data-x="right"
+                   data-y="600"
+                   data-start="900"
+                   data-transform_idle="o:1;"
+                   data-transform_in="y:[100%];sX:1;sY:1;s:1750;e:Power4.easeInOut;"
+                   data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                   data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                   data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" style="width: 300px">
+                <!---
+                                 <div style="width:300px; padding: 10px; font-size: 14px;">
+                                 Beneficiaries impacted
+                                 </div>
+
+
+
+                                <div style="background-color: blue; opacity: 0.6; width:300px; padding: 10px">
+           `                      <ul  style="font-size: 14px; opacity: 1.0">
+                                   <li class="facebook" style="display: inline"><a href=""><strong>26,300 </strong>Education</li><br>
+                                   <li class="facebook" style="display: inline"><a href=""><strong>14,500 </strong>Economic Empowerment</li><br>
+                                   <li class="facebook" style="display: inline"><a href=""><strong>9,700 </strong>Health Care</li><br>
+                                 </ul>
+                               </div>--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- LAYER NR. 4 -->
+                <div class="tp-caption small_white"
+                     data-x="<%= slide.justify %>"
+                     data-y="410"
+                     data-start="1100"
+                     data-transform_idle="o:1;"
+                     data-transform_in="y:[100%];sX:1;sY:1;o:0;s:1500;e:Power4.easeInOut;"
+                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+
+                </div>
+
+                <!-- LAYER NR. 5 -->
+                <div class="tp-caption"
+                     data-x="center"
+                     data-y="bottom"
+                     data-voffset="100"
+                     data-start="1250"
+                     data-transform_idle="o:1;"
+                     data-transform_in="y:[100%];sX:1;sY:1;o:0;s:2000;e:Power4.easeInOut;"
+                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+
+                  <a href="#page-start" class="btn btn-lg moving smooth-scroll"><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i><i class="icon-down-open-big"></i></a>
+                </div>
+
+
+
+
+
+
+
+
+            </li>
+            <!-- slide 2 end -->
+
+
+
+
+
+
+        <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <%#= render 'visitors/slide1' %>
+        <%#= render 'visitors/slide2' %>
+
+      </ul>
+    </div>
+  </div>
+  <!-- slider revolution end -->
+
+</div>
+<!-- slideshow end -->
+
+
+<!-- banner end -->

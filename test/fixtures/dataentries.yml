@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pidut: 1
+  ftf_annual_target: 1.5
+  nonftf_annual_target: 1.5
+  ftf_qtr_target: 1.5
+  nonftf_atr_target: 1.5
+  ftf_atr_result: 1.5
+  nonftf_qtr_result: 1.5
+  yid: 1
+  qid: 1
+  comment: MyString
+  comment2: MyString
+
+two:
+  pidut: 1
+  ftf_annual_target: 1.5
+  nonftf_annual_target: 1.5
+  ftf_qtr_target: 1.5
+  nonftf_atr_target: 1.5
+  ftf_atr_result: 1.5
+  nonftf_qtr_result: 1.5
+  yid: 1
+  qid: 1
+  comment: MyString
+  comment2: MyString

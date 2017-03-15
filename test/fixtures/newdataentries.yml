@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reporting_id: 1
+  q1target: 1.5
+  q2target: 1.5
+  q3target: 1.5
+  q4target: 1.5
+  q1result: 1.5
+  q2result: 1.5
+  q3result: 1.5
+  q4result: 1.5
+  fybaseline: 1.5
+  fybasedate: 2016-12-31
+  fytarget: 1.5
+  fyresult: 1.5
+
+two:
+  reporting_id: 1
+  q1target: 1.5
+  q2target: 1.5
+  q3target: 1.5
+  q4target: 1.5
+  q1result: 1.5
+  q2result: 1.5
+  q3result: 1.5
+  q4result: 1.5
+  fybaseline: 1.5
+  fybasedate: 2016-12-31
+  fytarget: 1.5
+  fyresult: 1.5

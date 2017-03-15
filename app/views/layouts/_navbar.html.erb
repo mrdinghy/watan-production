@@ -1,0 +1,217 @@
+<!-- header-container start -->
+<div class="header-container">
+
+  <!-- header-top start -->
+  <!-- classes:  -->
+  <!-- "dark": dark version of header top e.g. class="header-top dark" -->
+  <!-- "colored": colored version of header top e.g. class="header-top colored" -->
+  <!-- ================ -->
+  <div class="header-top dark ">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3 col-sm-6 col-md-9">
+          <!-- header-top-first start -->
+          <!-- ================ -->
+          <%= render 'layouts/socials' %>
+          <!-- header-top-first end -->
+        </div>
+        <div class="col-xs-9 col-sm-6 col-md-3">
+
+          <!-- header-top-second start -->
+          <!-- ================ -->
+          <div id="header-top-second"  class="clearfix">
+
+            <!-- header top dropdowns start -->
+            <!-- ================ -->
+           <!--- <div class="header-top-dropdown text-right">
+              <div class="btn-group">
+                <a href="page-signup.html" class="btn btn-default btn-sm"><i class="fa fa-user pr-10"></i> Sign Up</a>
+              </div>
+              <div class="btn-group dropdown">
+                <button type="button" class="btn dropdown-toggle btn-default btn-sm" data-toggle="dropdown"><i class="fa fa-lock pr-10"></i> Login</button>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                  <li>
+                    <form class="login-form margin-clear">
+                      <div class="form-group has-feedback">
+                        <label class="control-label">Username</label>
+                        <input type="text" class="form-control" placeholder="">
+                        <i class="fa fa-user form-control-feedback"></i>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label class="control-label">Password</label>
+                        <input type="password" class="form-control" placeholder="">
+                        <i class="fa fa-lock form-control-feedback"></i>
+                      </div>
+                      <button type="submit" class="btn btn-gray btn-sm">Log In</button>
+                      <span class="pl-5 pr-5">or</span>
+                      <button type="submit" class="btn btn-default btn-sm">Sing Up</button>
+                      <ul>
+                        <li><a href="#">Forgot your password?</a></li>
+                      </ul>
+                      <span class="text-center">Login with</span>
+                      <ul class="social-links circle small colored clearfix">
+                        <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                        <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                        <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                      </ul>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>--->
+            <!--  header top dropdowns end -->
+          </div>
+          <!-- header-top-second end -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header-top end -->
+
+  <!-- header start -->
+  <!-- classes:  -->
+  <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+  <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+  <!-- "full-width": mandatory class for the full-width menu layout -->
+  <!-- "centered": mandatory class for the centered logo layout -->
+  <!-- ================ -->
+  <header class="header  fixed    clearfix">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 ">
+          <!-- header-left start -->
+          <!-- ================ -->
+          <div class="header-left clearfix">
+
+            <!-- header dropdown buttons -->
+            <div class="header-dropdown-buttons visible-xs">
+              <div class="btn-group dropdown">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i></button>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                  <li>
+                    <form role="search" class="search-box margin-clear">
+                      <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <i class="icon-search form-control-feedback"></i>
+                      </div>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- header dropdown buttons end-->
+
+            <!-- logo -->
+            <div>
+              <%= link_to root_path do %>
+              <%= image_tag("logoalone2.png", alt: "Watan Syria",  :size => "244x200") %>
+              <% end %>
+
+
+
+            </div>
+
+            <!-- name-and-slogan -->
+
+
+          </div>
+          <!-- header-left end -->
+
+        </div>
+        <div class="col-md-9">
+
+          <!-- header-right start -->
+          <!-- ================ -->
+          <div class="header-right clearfix">
+
+            <!-- main-navigation start -->
+            <!-- classes: -->
+            <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+            <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+            <!-- "with-dropdown-buttons": Mandatory class that adds extra space, to the main navigation, for the search and cart dropdowns -->
+            <!-- ================ -->
+            <div class="main-navigation  animated with-dropdown-buttons">
+
+              <!-- navbar start -->
+              <!-- ================ -->
+              <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+
+                  <!-- Toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <!-- main-menu -->
+                    <ul class="nav navbar-nav ">
+
+
+                      <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Who We Are</a>
+                        <ul class="dropdown-menu">
+                          <li><%= link_to 'About', about_path %></li>
+                          <li><%= link_to 'Mission and Objectives', mission_path %></li>
+                          <li><%= link_to 'Reach', reach_path %></li>
+
+
+                        </ul>
+                      </li>
+
+                      <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Expertise</a>
+                        <ul class="dropdown-menu">
+                          <% @allprograms.each do |program| %>
+
+                              <li><%= link_to program.name, program %></li>
+
+                          <% end %>
+                       </ul>
+                      </li>
+
+
+                      <li ><%= link_to 'WATAN Network', network_path %></li>
+                      <li ><%= link_to 'Partners', partners_path %></li>
+
+
+
+                    </ul>
+                    <!-- main-menu end -->
+
+                    <li><%= link_to 'DONATE', root_path(:anchor => 'donate'), class: "btn btn-danger btn-xls pull-right" %></li>
+
+                  </div>
+
+                </div>
+              </nav>
+              <!-- navbar end -->
+
+            </div>
+            <!-- main-navigation end -->
+
+
+
+
+
+
+          </div>
+          <!-- header-right end -->
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <!-- header end -->
+</div>
+<!-- header-container end -->
+

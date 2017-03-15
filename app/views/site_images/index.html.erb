@@ -1,0 +1,65 @@
+
+<section id="media" class="main-container">
+  <div class="container">
+    <div class="row">
+
+
+
+      <div class="main col-md-12">
+
+        <!-- page-title start -->
+        <!-- ================ -->
+        <h1 class="page-title">Watan Web Images</h1>
+        <div class="separator-2"></div>
+        <!-- page-title end -->
+
+        <div class="pull-right">
+          <%= link_to 'New Site image', new_site_image_path, :class => "btn btn-primary" %>
+        </div>
+
+        <p class="lead">Upload all files here and then add them to pages when editing the actual page through the add image links</p>
+
+        <!-- isotope filters start -->
+        <!---<div class="filters">
+          <ul class="nav nav-pills">
+            <li class="active"><a href="#" data-filter="*">All</a></li>
+            <li><a href="#" data-filter=".web-design">Web design</a></li>
+            <li><a href="#" data-filter=".app-development">App development</a></li>
+            <li><a href="#" data-filter=".site-building">Site building</a></li>
+          </ul>
+        </div> --->
+        <!-- isotope filters end -->
+
+        <div class="isotope-container-fitrows row grid-space-10">
+          <% @site_images.each do |site_image| %>
+              <div class="col-md-3 col-sm-6 isotope-item app-development">
+                <div class="image-box shadow bordered text-center mb-20">
+                  <div class="overlay-container" style='border: #666 solid 10px'>
+                    <%= image_tag site_image.image.url, width: "100%" %>
+                    <div class="overlay-top">
+                      <div class="text">
+                        ID name: <%= site_image.name %><br>
+                        Caption: <small><%= site_image.caption %></small>
+                      </div>
+                    </div>
+                    <div class="overlay-bottom">
+                      <p class="small"><%= link_to 'Edit', edit_site_image_path(site_image), class: 'btn btn-small btn-primary' %></p>
+
+
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+          <% end %>
+
+
+
+
+        </div>
+        <BR><BR><BR><BR><BR><BR><BR><BR>
+      </div>
+    </div>
+  </div>
+</section>

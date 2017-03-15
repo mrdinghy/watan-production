@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  publish: false
+  watanprogram_id: 1
+  transition_id: 1
+  justify: MyString
+  slotamount: 1
+  logo: MyString
+  logo_datay: 1
+  logo_datastart: 1
+  title_datay: 1
+  title_datastart: 1
+  text_datay: 1
+  text_datastart: 1
+  side: 1
+  topline: 1
+  blurb: MyText
+  blurblines: 1
+  title: MyString
+  body: MyText
+  imgalt: MyString
+
+two:
+  publish: false
+  watanprogram_id: 1
+  transition_id: 1
+  justify: MyString
+  slotamount: 1
+  logo: MyString
+  logo_datay: 1
+  logo_datastart: 1
+  title_datay: 1
+  title_datastart: 1
+  text_datay: 1
+  text_datastart: 1
+  side: 1
+  topline: 1
+  blurb: MyText
+  blurblines: 1
+  title: MyString
+  body: MyText
+  imgalt: MyString

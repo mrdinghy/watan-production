@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to pages_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_page_path(@page), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show page</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @page.title %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @page.body %></dd>
+
+  <dt>Pagelocation:</dt>
+  <dd><%= @page.pagelocation %></dd>
+
+  <dt>Homepage:</dt>
+  <dd><%= @page.homepage %></dd>
+
+  <dt>Publish:</dt>
+  <dd><%= @page.publish %></dd>
+
+</dl>

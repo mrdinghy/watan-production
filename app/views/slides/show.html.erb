@@ -1,0 +1,71 @@
+<div class="page-header">
+  <%= link_to slides_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_slide_path(@slide), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show slide</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Publish:</dt>
+  <dd><%= @slide.publish %></dd>
+
+  <dt>Watanprogram:</dt>
+  <dd><%= @slide.watanprogram_id %></dd>
+
+  <dt>Transition:</dt>
+  <dd><%= @slide.transition_id %></dd>
+
+  <dt>Justify:</dt>
+  <dd><%= @slide.justify %></dd>
+
+  <dt>Slotamount:</dt>
+  <dd><%= @slide.slotamount %></dd>
+
+  <dt>Logo:</dt>
+  <dd><%= @slide.logo %></dd>
+
+  <dt>Logo datay:</dt>
+  <dd><%= @slide.logo_datay %></dd>
+
+  <dt>Logo datastart:</dt>
+  <dd><%= @slide.logo_datastart %></dd>
+
+  <dt>Title datay:</dt>
+  <dd><%= @slide.title_datay %></dd>
+
+  <dt>Title datastart:</dt>
+  <dd><%= @slide.title_datastart %></dd>
+
+  <dt>Text datay:</dt>
+  <dd><%= @slide.text_datay %></dd>
+
+  <dt>Text datastart:</dt>
+  <dd><%= @slide.text_datastart %></dd>
+
+  <dt>Side:</dt>
+  <dd><%= @slide.side %></dd>
+
+  <dt>Topline:</dt>
+  <dd><%= @slide.topline %></dd>
+
+  <dt>Blurb:</dt>
+  <dd><%= @slide.blurb %></dd>
+
+  <dt>Blurblines:</dt>
+  <dd><%= @slide.blurblines %></dd>
+
+  <dt>Title:</dt>
+  <dd><%= @slide.title %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @slide.body %></dd>
+
+  <dt>Imgalt:</dt>
+  <dd><%= @slide.imgalt %></dd>
+
+</dl>

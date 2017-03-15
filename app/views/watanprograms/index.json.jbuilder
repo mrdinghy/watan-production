@@ -1,0 +1,1 @@
+json.array! @watanprograms, partial: 'watanprograms/watanprogram', as: :watanprogram

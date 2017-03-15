@@ -1,0 +1,1 @@
+json.array! @site_documents, partial: 'site_documents/site_document', as: :site_document

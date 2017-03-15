@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  insightid: 1
+  disaggregate: MyString
+  disaggregategroup: MyString
+  tier1: MyString
+  isvalid: 1
+
+two:
+  insightid: 1
+  disaggregate: MyString
+  disaggregategroup: MyString
+  tier1: MyString
+  isvalid: 1

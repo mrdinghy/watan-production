@@ -1,0 +1,198 @@
+<%= form_for(@slide, html: { class: "form-horizontal", role: "form", multipart: true }) do |f| %>
+  <% if @slide.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@slide.errors.count, "error") %> prohibited this slide from being saved:</h4>
+
+      <ul>
+      <% @slide.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+    <% pxlist= '' %>
+    <% (10..500).step(10) do |n| %>
+
+        <% if n != 500 %>
+            <% px = n.to_s + ',' %>
+        <% else %>
+            <% px = n.to_s %>
+        <% end %>
+        <% pxlist = pxlist + px %>
+    <% end %>
+
+
+
+
+    <div class="panel-body">
+      <div  class="form-horizontal">
+        <%= form_for @slide do |f| %>
+
+
+            <% if @slide.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@slide.errors.count, "error") %> prohibited this slide from being saved:</h2>
+
+                  <ul>
+                    <% @slide.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+
+
+            <div class="form-group">
+              <%= f.label :title, :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.text_field :title, :class => "form-control" %>
+
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <%= f.label 'Text Box', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.text_area :blurb, :id => "slideblurb", :cols => "100", :rows => "15" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label 'Number of Text lines', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.number_field :blurblines %>
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label 'Image Alt tag', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.text_field :imgalt, :class => "form-control" %>
+
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <%= f.label 'Watan Program Area', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.collection_select(:watanprogram_id, Watanprogram.all, :id, :name, include_blank: true, :class => "form-control") %>
+
+
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <%= f.label 'Slide Transition', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.collection_select(:transition, Transition.all, :id, :name, include_blank: true, :class => "form-control") %>
+
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label 'Content Justification', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.radio_button :justify, 'left' %> Left<br />
+                <%= f.radio_button :justify, 'right' %> Right<br />
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label 'Logo start line', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.number_field :topline, :class => "form-control" %>
+
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="form-group">
+              <%= f.label 'Current Slide', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-4">
+
+                <%#= image_tag @slide.file.url, :width => "100%", :class => "pull-left" %>
+
+              </div>
+              <%= f.label 'Replace', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-4">
+                <%= f.file_field :image, :class => "form-control" %>
+              </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <%= f.submit class: "btn btn-primary" %>
+              </div>
+            </div>
+        <% end %>
+
+
+
+
+        <% end %>
+
+
+      </div>
+    </div>
+
+    <script>
+        $(function() {
+            $('#slidetext').froalaEditor()
+        });
+        $(function() {
+            $('#slideblurb').froalaEditor()
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

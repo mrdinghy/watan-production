@@ -1,0 +1,1 @@
+json.partial! "site_documents/site_document", site_document: @site_document

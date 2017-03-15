@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  partners: MyString
+  country_id: 1
+  projectstatus_id: 1
+  publish: false
+  project_start: 2017-01-24
+  project_end: 2017-01-24
+
+two:
+  name: MyString
+  description: MyString
+  partners: MyString
+  country_id: 1
+  projectstatus_id: 1
+  publish: false
+  project_start: 2017-01-24
+  project_end: 2017-01-24

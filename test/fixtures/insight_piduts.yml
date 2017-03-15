@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  insightid: 1
+  projectid: 1
+  idut_id: 1
+
+two:
+  insightid: 1
+  projectid: 1
+  idut_id: 1

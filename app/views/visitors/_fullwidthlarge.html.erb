@@ -1,0 +1,129 @@
+<!-- banner start -->
+<!-- ================ -->
+<div class="banner clearfix">
+
+  <!-- slideshow start -->
+  <!-- ================ -->
+  <div class="slideshow">
+
+    <!-- slider revolution start -->
+    <!-- ================ -->
+    <div class="slider-revolution-5-container">
+      <div id="slider-banner-fullwidth-big-height" class="slider-banner-fullwidth-big-height rev_slider" data-version="5.0">
+        <ul class="slides">
+          <% @myslides.each do |slide| %>
+          <!-- slide 1 start -->
+          <!-- ================ -->
+          <li data-transition="fade" data-slotamount="default" data-masterspeed="default" data-title="">
+
+            <%= image_tag slide.image.url, :class => "rev-slidebg", :data => { :bgposition => "center center", :bgrepeat => "no-repeat", :bgfit => "cover"}  %>
+            <%#= cl_image_tag("img_boydust_igjeto", :alt => "Sample Image") %>
+
+            <% logo_go = slide.topline.to_i %>
+
+            <% title_go = slide.topline.to_i + 150 %>
+
+            <% line_go = title_go  + 50 %>
+            <% text_go = line_go  + 10 %>
+            <% textlines = slide.blurblines * 40 %>
+            <% social_go = 80 + (text_go + textlines) %>
+
+
+
+
+
+
+
+            <!-- Transparent Background -->
+            <div class="tp-caption dark-translucent-bg"
+                 data-x="center"
+                 data-y="center"
+                 data-start="0"
+                 data-transform_idle="o:1;"
+                 data-transform_in="o:0;s:600;e:Power2.easeInOut;"
+                 data-transform_out="o:0;s:600;"
+                 data-width="5000"
+                 data-height="5000">
+            </div>
+
+
+            <div class="tp-caption large_white tp-resizeme hidden-xs"
+                 data-x="<%= slide.justify %>"
+                 data-y="<%= logo_go %>"
+                 data-start="1300"
+                 data-width="500"
+                 data-transform_idle="o:1;"
+                 data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
+              <%= image_tag('logoalonewhite.png') %><br>
+            </div>
+
+
+
+
+
+
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption text-<%= slide.justify %> large_white avenir"
+                 data-x="<%= slide.justify %>"
+                 data-y="<%= title_go %>"
+                 data-start="1000"
+                 data-width="650"
+                 data-transform_idle="o:1;"
+                 data-transform_in="y:[100%];sX:1;sY:1;o:0;s:2150;e:Power4.easeInOut;"
+                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                 data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;">
+              <!---<span class="logo-font">The <span class="text-default">Project</span></span><br>--->
+
+              <%= slide.watanprogram.name if slide.watanprogram_id %>
+            </div>
+
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption large_white tp-resizeme hidden-xs"
+                 data-x="<%= slide.justify %>"
+                 data-y="<%= line_go %>"
+                 data-start="1300"
+                 data-width="500"
+                 data-transform_idle="o:1;"
+                 data-transform_in="o:0;s:2000;e:Power4.easeInOut;">
+              <div class="separator light  text-<%= slide.justify %>"></div>
+            </div>
+
+            <!-- LAYER NR. 3 -->
+            <div class="tp-caption medium_white text-<%= slide.justify %> hidden-xs"
+                 data-x="<%= slide.justify %>"
+                 data-y="<%= text_go %>"
+                 data-start="1300"
+                 data-width="550"
+                 data-transform_idle="o:1;"
+                 data-transform_in="y:[100%];sX:1;sY:1;s:1700;e:Power4.easeInOut;"
+                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;"
+                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                 style="min-width: 550px; max-width: 550px; white-space: normal; line-height: 95%;">
+
+                <%= slide.blurb.html_safe %><br>
+
+              <%= link_to 'Learn More', root_path(:anchor => 'about'), :class => "btn btn-primary radius-50 btn-lg btn-animated margin-clear" %>
+              <i class="fa fa-info-circle"></i></a> <span class="pl-5 pr-5">or</span>
+              <%= link_to 'Donate', root_path(:anchor => 'donate'), :class => "btn btn-danger btn-lg radius-50 btn-lg btn-animated margin-clear" %>
+              <i class="fa fa-envelope"></i></a>
+              </div>
+
+
+
+          </li>
+          <!-- slide 1 end -->
+           <% end %>
+
+        </ul>
+        <div class="tp-bannertimer"></div>
+      </div>
+    </div>
+    <!-- slider revolution end -->
+
+  </div>
+  <!-- slideshow end -->
+
+</div>
+<!-- banner end -->

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pointdate: 2016-11-23
+  bat: 1
+  value: 1.5
+  nom: 1.5
+  denom: 1.5
+  reporting_id: 1
+
+two:
+  pointdate: 2016-11-23
+  bat: 1
+  value: 1.5
+  nom: 1.5
+  denom: 1.5
+  reporting_id: 1

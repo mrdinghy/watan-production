@@ -1,0 +1,1 @@
+json.array! @websitecontacts, partial: 'websitecontacts/websitecontact', as: :websitecontact

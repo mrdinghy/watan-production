@@ -1,0 +1,2 @@
+json.extract! post, :id, :title, :body, :published_at, :post_type, :on_homepage, :event_location, :event_link, :is_event, :event_date, :event_time, :created_at, :updated_at
+json.url post_url(post, format: :json)

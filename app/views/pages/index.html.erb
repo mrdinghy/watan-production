@@ -1,0 +1,37 @@
+<div class="page-header">
+  <%= link_to new_page_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Page
+  <% end %>
+  <h1>Listing pages</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Pagelocation</th>
+            <th>Homepage</th>
+            <th>Publish</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @pages) do |page| %>
+            <td><%= page.title %></td>
+            <td><%= page.body %></td>
+            <td><%= page.pagelocation %></td>
+            <td><%= page.homepage %></td>
+            <td><%= page.publish %></td>
+            <td><%= link_to 'Show', page %></td>
+        <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

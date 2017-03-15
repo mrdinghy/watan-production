@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calcyear: 1
+  calccount: 1
+  watanprogram_id: 1
+
+two:
+  calcyear: 1
+  calccount: 1
+  watanprogram_id: 1

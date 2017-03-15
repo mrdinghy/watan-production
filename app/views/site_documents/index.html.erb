@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_site_document_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Site document
+  <% end %>
+  <h1>Listing site_documents</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th></th>
+            <th>Documentable</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @site_documents) do |site_document| %>
+            <td><%= site_document.name %></td>
+            <td><%= site_document.documentable_type %></td>
+            <td><%= site_document.documentable_id %></td>
+            <td><%= link_to 'Show', site_document %></td>
+        <td><%= link_to 'Edit', edit_site_document_path(site_document) %></td>
+        <td><%= link_to 'Destroy', site_document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
