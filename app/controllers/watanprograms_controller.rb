@@ -69,6 +69,6 @@ class WatanprogramsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def watanprogram_params
-      params.require(:watanprogram).permit(:name, :body, :programcode)
+      params.require(:watanprogram).permit(:name, :body, :body2, :body3, :programcode, :image1, :image2, :image3, :image4, :imagewidth1,:imagewidth2,:imagewidth3,:imagewidth4)
     end
 end

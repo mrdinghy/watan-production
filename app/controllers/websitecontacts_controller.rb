@@ -69,6 +69,6 @@ class WebsitecontactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def websitecontact_params
-      params.require(:websitecontact).permit(:name, :email, :subject, :message, :recorded)
+      params.require(:websitecontact).permit(:name, :email, :subject, :message, :recorded )
     end
 end
