@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227023501) do
+ActiveRecord::Schema.define(version: 20170320013511) do
 
   create_table "beneficiaries", force: :cascade do |t|
     t.integer  "calcyear"
@@ -207,6 +207,10 @@ ActiveRecord::Schema.define(version: 20170227023501) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "cloud_filename"
+    t.integer  "cloud_height"
+    t.integer  "cloud_width"
+    t.boolean  "isslide"
   end
 
   create_table "slide_translations", force: :cascade do |t|
@@ -245,6 +249,10 @@ ActiveRecord::Schema.define(version: 20170227023501) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "cloud_filename"
+    t.integer  "cloud_height"
+    t.integer  "cloud_width"
+    t.string   "logo_justify"
   end
 
   create_table "transitions", force: :cascade do |t|

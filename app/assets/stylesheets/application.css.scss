@@ -46,5 +46,31 @@ h1, h2, h3, h4, h5, h6, .navbar .navbar-nav {
 .navbar-nav {
   font-family: 'AvenirNextLTPro';
 }
+.navbar-default {
+  border-bottom: 2px darkblue solid
+}
+.header-top.dark {
+  background-color: #ffffff;
+  border-bottom: 1px solid #242a2e;
+}
 
+.floatlogo {
+  float: left;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  clear: left;
+  border: 3px solid #fff;
+}
+.ui-layout-north {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 50;
+  width: 126px;
+  height: 125px;
+  background: #002742;
+  z-index: 10000;
 
+}

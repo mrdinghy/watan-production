@@ -13,14 +13,16 @@
         <th>Image</th>
             <th>Publish</th>
             <th>Watanprogram</th>
+            <th>Cloudimage</th>
+        <th>Logo Justify</th>
+        <th>Logo start</th>
+            <th>Text Justify</th>
+        <th>Text Start</th>
 
-            <th>Justify</th>
 
-
-            <th>Blurb</th>
             <th>Blurblines</th>
-            <th>Title</th>
-            <th>Body</th>
+            <th>Title (reference only)</th>
+
             <th>Imgalt</th>
             <th></th>
         <th></th>
@@ -30,16 +32,24 @@
 
     <tbody>
       <%= content_tag_for(:tr, @slides) do |slide| %>
-        <td> <%= image_tag slide.image.url, :width => "100", :class => "pull-left" %></td>
+        <td>
+          <%= cl_image_tag( slide.cloud_filename, :crop=>"thumb") %>
+
+
+          <%#= image_tag slide.image.url, :width => "100", :class => "pull-left" %></td>
             <td><%= slide.publish %></td>
             <td><%= slide.watanprogram.name %></td>
+        <td><%= slide.cloud_filename %></td>
+        <td><%= slide.logo_justify %></td>
+        <td><%= slide.logo_datay %></td>
+
 
             <td><%= slide.justify %></td>
+        <td><%= slide.topline %></td>
 
-            <td><%= slide.blurb %></td>
             <td><%= slide.blurblines %></td>
             <td><%= slide.title %></td>
-            <td><%= slide.body %></td>
+
             <td><%= slide.imgalt %></td>
             <td><%= link_to 'Show', slide %></td>
         <td><%= link_to 'Edit', edit_slide_path(slide) %></td>

@@ -93,14 +93,26 @@
 
 
 
-            <div class="form-group">
-              <%= f.label 'Slide Transition', :class => "col-sm-2 control-label" %>
-              <div class="col-sm-10">
-                <%= f.collection_select(:transition, Transition.all, :id, :name, include_blank: true, :class => "form-control") %>
 
+
+            <div class="form-group">
+              <%= f.label 'Logo Justification', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.radio_button :logo_justify, 'left' %> Left<br />
+                <%= f.radio_button :logo_justify, 'right' %> Right<br />
 
               </div>
             </div>
+
+            <div class="form-group">
+              <%= f.label 'Logo start line', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.number_field :logo_datay, :class => "form-control" %>
+
+              </div>
+            </div>
+
+            <hr>
 
             <div class="form-group">
               <%= f.label 'Content Justification', :class => "col-sm-2 control-label" %>
@@ -112,16 +124,35 @@
             </div>
 
             <div class="form-group">
-              <%= f.label 'Logo start line', :class => "col-sm-2 control-label" %>
+              <%= f.label 'title start line', :class => "col-sm-2 control-label" %>
               <div class="col-sm-10">
                 <%= f.number_field :topline, :class => "form-control" %>
 
               </div>
             </div>
 
+            <div class="form-group">
+              <%= f.label 'Cloudinary File Name', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.text_field :cloud_filename, :class => "form-control" %>
 
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label 'Cloudinary Width', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.number_field :cloud_width, :class => "form-control" %>
 
+              </div>
+            </div>
 
+            <div class="form-group">
+              <%= f.label 'Cloudinary Height', :class => "col-sm-2 control-label" %>
+              <div class="col-sm-10">
+                <%= f.number_field :cloud_height, :class => "form-control" %>
+
+              </div>
+            </div>
 
 
 

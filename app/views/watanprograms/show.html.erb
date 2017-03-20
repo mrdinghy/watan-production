@@ -24,6 +24,53 @@
           <div class="col-md-6">
 
 
+
+            <% if @watanprogram.id == 4 %>
+                <%= cl_image_tag("protection1_nyj8qo", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("protection2_x5ihl0", :crop => "fit") %>
+            <% elsif @watanprogram.id == 6 %>
+                <%= cl_image_tag("FSL1_nr7ejl", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("FSL2_d8bomc", :crop=>"fit") %>
+
+
+            <% elsif @watanprogram.id == 8 %>
+                <%= cl_image_tag("WASH222_m4usbz", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("WASH11_t844ky", :crop=>"fit") %>
+
+            <% elsif @watanprogram.id == 5 %>
+                <%= cl_image_tag("Shelter2_litciv", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("Shelter1_ddsvft", :crop=>"fit") %>
+
+            <% elsif @watanprogram.id == 3 %>
+                <%= cl_image_tag("Health1_dinmih", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("Health23_kgzgia", :crop=>"fit") %>
+            <% elsif @watanprogram.id == 1 %>
+                <%= cl_image_tag("education_52_nm36u2", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("education_6_aczxj3") %>
+            <% elsif @watanprogram.id == 2 %>
+                <%= cl_image_tag("Economic_Empowerment1_dzpnjt", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("Economic_Empowerment2_eusfil", :crop=>"fit") %>
+
+            <% elsif @watanprogram.id == 7 %>
+                <%= cl_image_tag("css_iwg7qp", :crop=>"fit") %>
+                <hr>
+                <%= cl_image_tag("css2_mi6srr", :crop=>"fit") %>
+
+
+            <% end %>
+
+            Shelter1_ddsvft
+
+            protection2_x5ihl0
+
+
           </div>
         </div>
       </div>

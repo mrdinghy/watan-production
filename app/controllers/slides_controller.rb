@@ -69,7 +69,7 @@ class SlidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slide_params
-      params.require(:slide).permit(:publish, :watanprogram_id, :transition_id, :justify, :slotamount, :logo, :logo_datay, :logo_datastart, :title_datay, :title_datastart, :text_datay, :text_datastart,
-                                    :side, :topline, :blurb, :blurblines, :title, :body, :imgalt, :image)
+      params.require(:slide).permit(:publish, :watanprogram_id, :transition_id, :justify, :slotamount, :logo, :logo_datay, :logo_justify, :logo_datastart, :title_datay, :title_datastart, :text_datay, :text_datastart,
+                                    :side, :topline, :blurb, :blurblines, :title, :body, :imgalt, :cloud_filename, :cloud_width, :cloud_height, :image)
     end
 end

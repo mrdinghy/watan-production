@@ -3,7 +3,7 @@ class VisitorsController < ApplicationController
 
 def index
   @allprograms= Watanprogram.all
-  @myslides = Slide.where(id: 1)
+  @myslides = Slide.all
 
 
 

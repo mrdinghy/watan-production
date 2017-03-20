@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'visitors#contact', as: 'contact'
 
   post 'createuser', to: 'users#createuser', as: 'createuser'
+
+  get 'systemadmin', to: 'systemadmin#index', as: 'systemadmin'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
