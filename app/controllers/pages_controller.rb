@@ -14,17 +14,23 @@ class PagesController < ApplicationController
 
   # GET /pages/new
   def new
+     if user_signed_in?
     @page = Page.new
+       end
   end
 
   # GET /pages/1/edit
-  def edit
+  if user_signed_in?
+    def edit
+
+    end
   end
 
   # POST /pages
   # POST /pages.json
   def create
-    @page = Page.new(page_params)
+    if user_signed_in?
+      @page = Page.new(page_params)
 
     respond_to do |format|
       if @page.save
@@ -35,6 +41,8 @@ class PagesController < ApplicationController
         format.json { render json: @page.errors, status: :unprocessable_entity }
       end
     end
+    end
+
   end
 
   # PATCH/PUT /pages/1
