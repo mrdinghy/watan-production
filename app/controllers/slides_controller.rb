@@ -1,10 +1,12 @@
 class SlidesController < ApplicationController
   before_action :set_slide, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /slides
   # GET /slides.json
   def index
+    if user_signed_in?
     @slides = Slide.all
+      end
   end
 
   # GET /slides/1
@@ -14,7 +16,9 @@ class SlidesController < ApplicationController
 
   # GET /slides/new
   def new
+    if user_signed_in?
     @slide = Slide.new
+      end
   end
 
   # GET /slides/1/edit
@@ -24,6 +28,7 @@ class SlidesController < ApplicationController
   # POST /slides
   # POST /slides.json
   def create
+    if user_signed_in?
     @slide = Slide.new(slide_params)
 
     respond_to do |format|
@@ -35,11 +40,13 @@ class SlidesController < ApplicationController
         format.json { render json: @slide.errors, status: :unprocessable_entity }
       end
     end
+      end
   end
 
   # PATCH/PUT /slides/1
   # PATCH/PUT /slides/1.json
   def update
+    if user_signed_in?
     respond_to do |format|
       if @slide.update(slide_params)
         format.html { redirect_to @slide, notice: 'Slide was successfully updated.' }
@@ -49,16 +56,20 @@ class SlidesController < ApplicationController
         format.json { render json: @slide.errors, status: :unprocessable_entity }
       end
     end
+      end
   end
 
   # DELETE /slides/1
   # DELETE /slides/1.json
   def destroy
+    if user_signed_in?
     @slide.destroy
     respond_to do |format|
       format.html { redirect_to slides_url, notice: 'Slide was successfully destroyed.' }
       format.json { head :no_content }
     end
+    end
+
   end
 
   private

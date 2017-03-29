@@ -1,10 +1,12 @@
 class WatanprogramsController < ApplicationController
   before_action :set_watanprogram, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :except => [:show]
   # GET /watanprograms
   # GET /watanprograms.json
   def index
+
     @watanprograms = Watanprogram.all
+
   end
 
   # GET /watanprograms/1
@@ -14,9 +16,9 @@ class WatanprogramsController < ApplicationController
 
   # GET /watanprograms/new
   def new
-    if user_signed_in?
+
       @watanprogram = Watanprogram.new
-    end
+
 
   end
 
@@ -27,7 +29,7 @@ class WatanprogramsController < ApplicationController
   # POST /watanprograms
   # POST /watanprograms.json
   def create
-    if user_signed_in?
+
       @watanprogram = Watanprogram.new(watanprogram_params)
 
     respond_to do |format|
@@ -38,14 +40,14 @@ class WatanprogramsController < ApplicationController
         format.html { render :new }
         format.json { render json: @watanprogram.errors, status: :unprocessable_entity }
       end
-    end
+
       end
   end
 
   # PATCH/PUT /watanprograms/1
   # PATCH/PUT /watanprograms/1.json
   def update
-    if user_signed_in?
+
       respond_to do |format|
       if @watanprogram.update(watanprogram_params)
         format.html { redirect_to @watanprogram, notice: 'Watanprogram was successfully updated.' }
@@ -53,7 +55,6 @@ class WatanprogramsController < ApplicationController
       else
         format.html { render :edit }
         format.json { render json: @watanprogram.errors, status: :unprocessable_entity }
-      end
       end
       end
   end

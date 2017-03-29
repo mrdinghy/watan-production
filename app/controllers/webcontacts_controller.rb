@@ -1,6 +1,6 @@
 class WebcontactsController < ApplicationController
   before_action :set_webcontact, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /webcontacts
   # GET /webcontacts.json
   def index

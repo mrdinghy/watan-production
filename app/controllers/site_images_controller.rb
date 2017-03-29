@@ -1,6 +1,6 @@
 class SiteImagesController < ApplicationController
   before_action :set_site_image, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /site_images
   # GET /site_images.json
   def index

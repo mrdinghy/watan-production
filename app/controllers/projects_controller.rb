@@ -1,11 +1,13 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :except => [:show]
   # GET /projects
   # GET /projects.json
   def index
+
     @projects = Project.all
-  end
+
+    end
 
   # GET /projects/1
   # GET /projects/1.json
@@ -24,6 +26,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
+
     @project = Project.new(project_params)
 
     respond_to do |format|
@@ -34,12 +37,14 @@ class ProjectsController < ApplicationController
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
-    end
+
+      end
   end
 
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
+
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -49,6 +54,7 @@ class ProjectsController < ApplicationController
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /projects/1

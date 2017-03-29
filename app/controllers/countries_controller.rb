@@ -1,10 +1,12 @@
 class CountriesController < ApplicationController
   before_action :set_country, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :except => [:show]
   # GET /countries
   # GET /countries.json
   def index
+    if user_signed_in?
     @countries = Country.all
+      end
   end
 
   # GET /countries/1
@@ -14,8 +16,11 @@ class CountriesController < ApplicationController
 
   # GET /countries/new
   def new
+
     @country = Country.new
-  end
+
+
+    end
 
   # GET /countries/1/edit
   def edit
@@ -24,6 +29,7 @@ class CountriesController < ApplicationController
   # POST /countries
   # POST /countries.json
   def create
+
     @country = Country.new(country_params)
 
     respond_to do |format|
@@ -34,12 +40,14 @@ class CountriesController < ApplicationController
         format.html { render :new }
         format.json { render json: @country.errors, status: :unprocessable_entity }
       end
+
     end
   end
 
   # PATCH/PUT /countries/1
   # PATCH/PUT /countries/1.json
   def update
+
     respond_to do |format|
       if @country.update(country_params)
         format.html { redirect_to @country, notice: 'Country was successfully updated.' }
@@ -49,16 +57,20 @@ class CountriesController < ApplicationController
         format.json { render json: @country.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /countries/1
   # DELETE /countries/1.json
   def destroy
+
     @country.destroy
     respond_to do |format|
       format.html { redirect_to countries_url, notice: 'Country was successfully destroyed.' }
       format.json { head :no_content }
+
     end
+
   end
 
   private

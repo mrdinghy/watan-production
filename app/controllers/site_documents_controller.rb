@@ -1,6 +1,6 @@
 class SiteDocumentsController < ApplicationController
   before_action :set_site_document, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /site_documents
   # GET /site_documents.json
   def index

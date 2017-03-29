@@ -1,10 +1,14 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :except => [:show]
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.all
+
+     @pages = Page.all
+
+
+
   end
 
   # GET /pages/1
@@ -14,22 +18,21 @@ class PagesController < ApplicationController
 
   # GET /pages/new
   def new
-     if user_signed_in?
+
     @page = Page.new
-       end
+
   end
 
   # GET /pages/1/edit
-  if user_signed_in?
+
     def edit
 
-    end
   end
 
   # POST /pages
   # POST /pages.json
   def create
-    if user_signed_in?
+
       @page = Page.new(page_params)
 
     respond_to do |format|
@@ -41,7 +44,7 @@ class PagesController < ApplicationController
         format.json { render json: @page.errors, status: :unprocessable_entity }
       end
     end
-    end
+
 
   end
 

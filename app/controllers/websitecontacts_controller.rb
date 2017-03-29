@@ -1,6 +1,6 @@
 class WebsitecontactsController < ApplicationController
   before_action :set_websitecontact, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /websitecontacts
   # GET /websitecontacts.json
   def index
