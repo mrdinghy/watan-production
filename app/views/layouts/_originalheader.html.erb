@@ -54,9 +54,9 @@
 <li><%#= link_to_unless_current "English", locale: "en", class: "switch" %></li>
 <li><%#= link_to_unless_current "العربية", locale: "ar" %></li>
 --->
-            <li ><%= link_to page_path(15) do %>Careers<% end %>  |  </li>
-            <li ><%= link_to page_path(16) do %>Media<% end %>  |  </li>
-            <li><%= link_to 'Contact Us', root_path(:anchor => 'contact') %></li>
+            <li ><%= link_to 'Careers', careers_path %>  |  </li>
+            <li ><%= link_to 'Media', media_path %>  |  </li>
+            <li><%= link_to 'Contact Us', contact_path %></li>
 
             <li></li>
             <li></li>

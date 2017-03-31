@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320013511) do
+ActiveRecord::Schema.define(version: 20170331012846) do
 
   create_table "beneficiaries", force: :cascade do |t|
     t.integer  "calcyear"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20170320013511) do
     t.integer  "imagewidth4"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "code"
   end
 
   create_table "post_translations", force: :cascade do |t|

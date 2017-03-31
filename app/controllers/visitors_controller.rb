@@ -7,7 +7,7 @@ def index
 
 
 
-  #@organizationpage = Page.find(2)
+  #@organizationpage = Page.find_by(2)
   #@membershippage = Page.find(4)
   #@contactpage = Page.find(8)
   #@getinvolved = Page.find(5)
@@ -30,40 +30,40 @@ end
 
 
 def about
-  @about = Page.find(1)
+  @about = Page.where(code: 'whoweare')[0]
   render 'about'
 end
 
 def mission
-  @mission = Page.find(2)
+  @mission = Page.where(code: 'mission')[0]
   render 'mission'
 end
 
 def reach
-  @wherewework = Page.find(3)
+  @wherewework = Page.where(code: 'wherewework')[0]
   render 'reach'
 end
 
 def network
-  @network = Page.find(6)
+  @network = Page.where(code: 'network')[0]
   render 'network'
 end
 
 
 def partners
-  @partners = Page.find(7)
+  @partners = Page.where(code: 'partners')[0]
   render 'partners'
 end
 
 
 def careers
-  @careers = Page.find(8)
+  @careers = Page.where(code: 'careers')[0]
   render 'careers'
 end
 
 
 def media
-  @media = Page.find(9)
+  @media = Page.where(code: 'media')[0]
   render 'media'
 end
 
@@ -71,7 +71,7 @@ end
 
 def contact
   @websitecontact = Websitecontact.new
-  @contactinfo = Page.find(10)
+  @contactinfo = Page.where(code: 'contact')[0]
   render 'contactus'
 end
 
